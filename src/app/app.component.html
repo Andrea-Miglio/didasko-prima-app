@@ -1,4 +1,10 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<h1>{{ titolo + ':' + date }}</h1>
+<div>
+  <input #rif_nome type="text" placeholder="Il tuo nome" />
+  <input #rif_cognome type="text" placeholder="Il tuo cognome" />
+  <input #rif_eta type="text" placeholder="La tua età" />
+  <button (click)="invioDati(rif_nome.value, rif_cognome.value, rif_eta.value)">
+    Invia
+  </button>
+  <p>Persona: {{ nome + ', ' + cognome + ', ' + eta }}</p>
+</div>
